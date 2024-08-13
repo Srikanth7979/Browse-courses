@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses Page</title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+.home-wu-top {
+    padding: 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+.home-hr-head {
+    font-size: 36px;
+    color: #800080;
+    font-weight: 700;
+}
+.home-wu-text {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #6c7477;
+    font-weight: 400;
+}
+.bc-mid-parent {
+    margin: 20px auto;
+    text-align: center;
+}
+.bc-mid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.bc-mid-chip {
+    margin: 5px 10px;
+    padding: 10px 20px;
+    border: 1px solid #844FDB;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #844FDB;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+.bc-mid-chip:hover {
+    background-color: #3f06a3; /* Background color on hover */
+    color: #ffffff; /* Text color on hover */
+}
+.bc-mid-chip img,
+.bc-mid-chip svg {
+    width: 30px; /* Adjust image size to be responsive */
+    max-width: 30px;
+    margin-right: 6px;
+}
+.bc-chips-cont {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 images per row */
+    gap: 20px; /* Space between images */
+    margin: 0 300px; /* Left and right margin */
+    margin-top: 20px;
+    justify-content: center;
+}
+.cc-cont {
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid #F0F0F0; /* Border around images */
+    padding: 10px;
+    border-radius: 10px; /* Rounded corners for images */
+    background-color: #FFF8FF; /* Background color for images */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+.cc-cont:hover {
+    transform: translateY(-10px); /* Lift the card on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+.cc-cont img {
+    width: 200px; /* Adjust image size to be responsive */
+    max-width: 300px; /* Increased maximum width for images */
+    height: auto; /* Keep aspect ratio */
+}
+.cc-cont div {
+    margin-top: 10px; /* Space between image and text */
+    font-weight: 600; /* Make the text bold */
+}
+@media (max-width: 1024px) {
+    .bc-chips-cont {
+        grid-template-columns: repeat(3, 1fr); /* Adjust for medium screens */
+        margin: 0 50px; /* Adjust margin for medium screens */
+    }
+    .cc-cont img {
+        max-width: 220px; /* Adjust max width for medium screens */
+    }
+}
+@media (max-width: 768px) {
+    .bc-chips-cont {
+        grid-template-columns: repeat(2, 1fr); /* Adjust for smaller screens */
+        margin: 0 100px; /* Adjust margin for smaller screens */
+    }
+    .cc-cont img {
+        max-width: 200px; /* Adjust max width for smaller screens */
+    }
+}
+@media (max-width: 480px) {
+    .bc-chips-cont {
+        grid-template-columns: 1fr; /* Adjust for very small screens */
+        margin: 0 60px; /* Adjust margin for very small screens */
+    }
+    .cc-cont img {
+        max-width: 300px; /* Adjust max width for very small screens */
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="home-wu-top">
+        <div class="home-hr-head headings-col">
+             <b class="home-hr-head headings-col-col">Browse our Courses</b>
+        </div>
+        <div class="home-wu-text">
+            Explore a wide range of courses where learning is fun, easy, and absolutely free!
+        </div>
+    </div>
+
+    <div class="bc-mid-parent">
+        <div class="bc-mid">
+            <div class="bc-mid-chip pointer chip-active" onclick="filterCourses('all')">
+                <img src="all courses.png" alt="">All Courses</div>
+        </div>
+    </div>
+
+    <div class="bc-chips-cont">
+       <a href="../ETL Testing/demo.html"><div class="cc-cont pointer course all design">
+            <img src="6.png" alt="ETL Testing">
+            <div></div>
+        </div></a> 
+        <div class="cc-cont pointer course all development">
+            <a href="../devops course/demo.html">
+                <img src="5.png" alt="DevOps">
+                <div></div>
+            </a>
+        </div>
+        <div class="cc-cont pointer course all development">
+            <a href="../devops course/demo.html">
+                <img src="4.png" alt="Java Full Stack">
+                <div></div>
+            </a>
+        </div>
+        <div class="cc-cont pointer course all it">
+            <a href="../Data science/demo.html">
+                <img src="1.png" alt="Data Science">
+                <div></div>
+            </a>
+        </div>
+        <div class="cc-cont pointer course all business">
+            <a href="../Machine Learning/demo.html">
+                <img src="2.png" alt="Machine Learning">
+                <div></div>
+            </a>
+        </div>        
+        <div class="cc-cont pointer course all development">
+            <a href="../Python Programming/demo.html">
+                <img src="3.png" alt="Python Full Stack">
+                <div></div>
+            </a>    
+        </div>
+        <div class="cc-cont pointer course all development">
+            <a href="../Gen AI/demo.html">
+                <img src="7.png" alt="Generative AI">
+                <div></div>
+            </a>    
+        </div>
+        <div class="cc-cont pointer course all it">
+            <a href="../Natural Language Processing/demo.html">
+                <img src="8.png" alt="Natural Language Processing">
+                <div></div>
+            </a>
+        </div>
+        <div class="cc-cont pointer course all it">
+            <a href="../Deep Learning/demo.html">
+                <img src="9.png" alt="Deep Learning">
+                <div></div>
+            </a>
+        </div>
+        <div class="cc-cont pointer course all it">
+            <a href="../Computer Vision/demo.html">
+                <img src="10.png" alt="Computer Vision">
+                <div></div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function filterCourses(category) {
+            var courses = document.getElementsByClassName('course');
+            for (var i = 0; i < courses.length; i++) {
+                if (category === 'all') {
+                    courses[i].style.display = 'block';
+                } else if (courses[i].classList.contains(category)) {
+                    courses[i].style.display = 'block';
+                } else {
+                    courses[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
